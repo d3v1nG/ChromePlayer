@@ -1,0 +1,24 @@
+{
+  "name": "YouTube Player",
+  "options_page": "options.html",
+  "version": "1.0",
+  "description": "Watch YouTube videos ad-free!",
+
+  "content_scripts": [
+        {
+          "matches" : ["http://*/*", "https://*/*"],
+          "js" : ["popup.js"]
+        }
+    ],
+
+  "manifest_version": 2,
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "declarativeContent", "tabs"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+
+}
